@@ -46,4 +46,34 @@ public:
 	{
 		return _MyList.GetItem(Size() - 1);
 	}
+
+	clsDblLinkedList::Node* GetItem(short index) {
+		return _MyList.GetItem(index);
+	}
+
+	void Reverse() {
+		_MyList.Reverse();
+	}
+
+	bool UpdateItem(short index, T value) {
+		return _MyList.UpdateItem(index, value);
+	}
+
+	bool InsertAfter(short index, T value) {
+		return _MyList.InsertAfter(index, value);
+	}
+
+	bool InsertAtFront(T value) {
+		return _MyList.InsertAtBeginning(value);
+	}
+
+	bool InsertAtBack(T value) {
+		return _MyList.InsertAtEnd(value);
+	}
+
+	bool Clear() {
+		return _MyList.Clear();
+	}
+
+	
 };
