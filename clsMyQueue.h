@@ -12,7 +12,7 @@ protected:
 
 public:
 
-	void push(T Item)
+	virtual void push(T Item)
 	{
 		_MyList.InsertAtEnd(Item);
 	}
@@ -47,7 +47,7 @@ public:
 		return _MyList.GetItem(Size() - 1);
 	}
 
-	clsDblLinkedList::Node* GetItem(short index) {
+	T GetItem(short index) {
 		return _MyList.GetItem(index);
 	}
 
@@ -59,20 +59,20 @@ public:
 		return _MyList.UpdateItem(index, value);
 	}
 
-	bool InsertAfter(short index, T value) {
-		return _MyList.InsertAfter(index, value);
+	void InsertAfter(short index, T value) {
+		_MyList.InsertAfter(index, value);
 	}
 
-	bool InsertAtFront(T value) {
-		return _MyList.InsertAtBeginning(value);
+	void InsertAtFront(T value) {
+		_MyList.InsertAtBeginning(value);
 	}
 
-	bool InsertAtBack(T value) {
-		return _MyList.InsertAtEnd(value);
+	void InsertAtBack(T value) {
+		 _MyList.InsertAtEnd(value);
 	}
 
-	bool Clear() {
-		return _MyList.Clear();
+	void Clear() {
+		_MyList.Clear();
 	}
 
 	
