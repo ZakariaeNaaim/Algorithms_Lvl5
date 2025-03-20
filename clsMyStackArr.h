@@ -5,10 +5,12 @@
 
 using namespace std;
 
-template <class T> class clsMyStack : public clsMyQueueArr<T> {
+template <class T> class clsMyStackArr : public clsMyQueueArr<T> {
 
 
 public:
+
+	clsMyStackArr(){}
 
 	void push(T Item)
 	{

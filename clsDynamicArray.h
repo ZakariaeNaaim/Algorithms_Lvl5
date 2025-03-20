@@ -179,15 +179,15 @@ public :
 	}
 
 	bool InsertAtEnd(T Value) {
-		return InsertAt(_Size, value);
+		return InsertAt(_Size, Value);
 	}
 
 	bool InsertBefore(int index, T Value) {
-		return (index < 1) ? InsertAtBeginning(value) : InsertAt(index - 1, value);
+		return (index < 1) ? InsertAtBeginning(Value) : InsertAt(index - 1, Value);
 	}
 
 	bool InsertAfter(int index, T Value) {
-		return (index >= _Size) ? InsertAt(_Size - 1, value) : InsertAt(index + 1, value);
+		return (index >= _Size) ? InsertAt(_Size - 1, Value) : InsertAt(index + 1, Value);
 	}
 
 };
