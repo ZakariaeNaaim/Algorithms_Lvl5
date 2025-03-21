@@ -1,26 +1,27 @@
 
 #include <iostream>
-#include "clsDblLinkedList.h"
+#include "clsQueueLine.h"
 
 using namespace std;
 
 
 int main()
 {
+    clsQueueLine PayBillsQueue("A0", 10);
+    clsQueueLine SubscriptionsQueue("B0", 5);
 
-    clsDblLinkedList <int> MydblLinkedList;
 
-    MydblLinkedList.InsertAtBeginning(5);
-    MydblLinkedList.InsertAtBeginning(4);
-    MydblLinkedList.InsertAtBeginning(3);
-    MydblLinkedList.InsertAtBeginning(2);
-    MydblLinkedList.InsertAtBeginning(1);
+    SubscriptionsQueue.IssueTicket();
+    SubscriptionsQueue.IssueTicket();
+    SubscriptionsQueue.IssueTicket();
 
-    cout << "\nLinked List Contenet:\n";
-    MydblLinkedList.PrintList();
 
-    MydblLinkedList.UpdateItem(2, 500);
+    SubscriptionsQueue.PrintAllTickets();
 
-    cout << "\nAfter Updating Item(2): " << "\n";
-    MydblLinkedList.PrintList();
+    SubscriptionsQueue.ServeNextClient();
+    SubscriptionsQueue.PrintAllTickets();
+
+    cout << "\nSubscriptions Queue After Serving One client\n";
+    SubscriptionsQueue.PrintAllTickets();
+
 }

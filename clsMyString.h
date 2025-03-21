@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stack>
+#include <iostream>
 
 using namespace std;
 
